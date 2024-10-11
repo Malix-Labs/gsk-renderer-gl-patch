@@ -11,22 +11,25 @@ Requires: sed
 %description
 Patch for GSK rendering issues (sets GSK_RENDERER=gl)
 
+%prep
+
+%build
+
 %install
-%include src/set.sh
-
-%post
-echo %{reboot_needed_message}
-
-%postun
-if [ "$1" -eq 0 ]; then
-  %include src/revert.sh
-  echo %{reboot_needed_message}
-fi
+mkdir -p %{buildroot}%{_bindir}
+cat > %{buildroot}%{_bindir}/gsk-renderer-gl-patch << 'EOF'
+#!/bin/bash
+echo "Setting GSK_RENDERER to gl"
+export GSK_RENDERER=gl
+echo "%{reboot_needed_message}"
+EOF
+chmod +x %{buildroot}%{_bindir}/gsk-renderer-gl-patch
 
 %files
-%{_sysconfdir}/environment.d/gsk.conf
-src/set.sh
-src/revert.sh
+%{_bindir}/gsk-renderer-gl-patch
+
+%post
+echo "To apply the patch, run 'gsk-renderer-gl-patch' and then reboot your system."
 
 %changelog
 * 2024-10-11T13:20:54Z Malix <alixbrunetcontact@gmail.com> - 1.0
