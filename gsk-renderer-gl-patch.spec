@@ -2,7 +2,7 @@
 
 Name: gsk-renderer-gl-patch
 Summary: Patch for GSK rendering issues (sets GSK_RENDERER=gl)
-Version: 1.0.0
+Version: 1.0.2
 Release: 1%{?dist}
 License: unlicense
 Group: System/Configuration/Files
@@ -32,5 +32,5 @@ gsk-renderer-gl-patch set
 gsk-renderer-gl-patch revert
 
 %changelog
-* 2024-10-11T13:20:54Z Malix <alixbrunetcontact@gmail.com> - 1.0
-- Initial Release
+* Fri Oct 11 2024 Malix <alixbrunetcontact@gmail.com>
+- new package built with tito
