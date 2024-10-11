@@ -10,18 +10,18 @@ Requires: sed
 Patch for GSK rendering issues (sets GSK_RENDERER=gl)
 
 %install
-install -D -m 0544 %{_sourcedir}/src/main.sh %{buildroot}/usr/bin/gsk-renderer-gl-patch
-install -D -m 0544 %{_sourcedir}/lib/set.sh %{buildroot}/usr/lib/gsk-renderer-gl-patch/set.sh
-install -D -m 0544 %{_sourcedir}/lib/revert.sh %{buildroot}/usr/lib/gsk-renderer-gl-patch/revert.sh
-install -D -m 0544 %{_sourcedir}/lib/reboot.sh %{buildroot}/usr/lib/gsk-renderer-gl-patch/reboot.sh
-install -D -m 0544 %{_sourcedir}/lib/variables.sh %{buildroot}/usr/lib/gsk-renderer-gl-patch/variables.sh
+install -D -m 0544 src/main.sh %{_bindir}/gsk-renderer-gl-patch
+install -D -m 0544 lib/set.sh %{_libdir}/gsk-renderer-gl-patch/set.sh
+install -D -m 0544 lib/revert.sh %{_libdir}/gsk-renderer-gl-patch/revert.sh
+install -D -m 0544 lib/reboot.sh %{_libdir}/gsk-renderer-gl-patch/reboot.sh
+install -D -m 0544 lib/variables.sh %{_libdir}/gsk-renderer-gl-patch/variables.sh
 
 %files
-/usr/bin/gsk-renderer-gl-patch
-/usr/lib/gsk-renderer-gl-patch/set.sh
-/usr/lib/gsk-renderer-gl-patch/revert.sh
-/usr/lib/gsk-renderer-gl-patch/reboot.sh
-/usr/lib/gsk-renderer-gl-patch/variables.sh
+%{_bindir}/gsk-renderer-gl-patch
+%{_libdir}/gsk-renderer-gl-patch/set.sh
+%{_libdir}/gsk-renderer-gl-patch/revert.sh
+%{_libdir}/gsk-renderer-gl-patch/reboot.sh
+%{_libdir}/gsk-renderer-gl-patch/variables.sh
 
 %post
 gsk-renderer-gl-patch set
