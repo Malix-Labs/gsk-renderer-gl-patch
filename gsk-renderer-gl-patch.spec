@@ -16,7 +16,7 @@ echo %{reboot_needed_message}
 
 %postun
 if [ "$1" -eq 0 ]; then
-  %include uninstall.sh
+  %include script/uninstall.sh
   echo %{reboot_needed_message}
 fi
 
