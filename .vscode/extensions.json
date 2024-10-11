@@ -2,6 +2,7 @@
 	"recommendations": [
 		"ian-h-chamberlain.rpm-specfile",
 		"timonwong.shellcheck",
-		"foxundermoon.shell-format"
+		"foxundermoon.shell-format",
+		"piotrpalarz.vscode-gitignore-generator"
 	]
 }

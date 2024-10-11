@@ -9,7 +9,8 @@
 			"extensions": [
 				"foxundermoon.shell-format",
 				"timonwong.shellcheck",
-				"ian-h-chamberlain.rpm-specfile"
+				"ian-h-chamberlain.rpm-specfile",
+				"piotrpalarz.vscode-gitignore-generator"
 			]
 		}
 	},
