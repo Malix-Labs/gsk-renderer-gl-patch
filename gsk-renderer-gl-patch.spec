@@ -2,7 +2,7 @@
 
 Name: gsk-renderer-gl-patch
 Summary: Patch for GSK rendering issues (sets GSK_RENDERER=gl)
-Version: 1.0
+Version: 1.0.0
 Release: 1%{?dist}
 License: unlicense
 Group: System/Configuration/Files
