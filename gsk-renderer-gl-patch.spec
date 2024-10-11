@@ -1,5 +1,3 @@
-%define reboot_needed_message "Reboot needed to reload the \`GSK_RENDERER\` environment variable."
-
 Name: gsk-renderer-gl-patch
 Summary: Patch for GSK rendering issues (sets GSK_RENDERER=gl)
 Version: 1.0.4
