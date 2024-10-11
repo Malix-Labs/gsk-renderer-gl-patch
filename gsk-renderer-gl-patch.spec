@@ -17,17 +17,17 @@ Source4: lib/variables.sh
 
 %install
 install -D -m 544 %{SOURCE0} %{buildroot}%{_bindir}/gsk-renderer-gl-patch
-install -D -m 544 %{SOURCE1} %{buildroot}%{_libdir}/gsk-renderer-gl-patch/set.sh
-install -D -m 544 %{SOURCE2} %{buildroot}%{_libdir}/gsk-renderer-gl-patch/revert.sh
-install -D -m 544 %{SOURCE3} %{buildroot}%{_libdir}/gsk-renderer-gl-patch/reboot.sh
-install -D -m 544 %{SOURCE4} %{buildroot}%{_libdir}/gsk-renderer-gl-patch/variables.sh
+install -D -m 544 %{SOURCE1} %{buildroot}%{_libexecdir}/gsk-renderer-gl-patch/set.sh
+install -D -m 544 %{SOURCE2} %{buildroot}%{_libexecdir}/gsk-renderer-gl-patch/revert.sh
+install -D -m 544 %{SOURCE3} %{buildroot}%{_libexecdir}/gsk-renderer-gl-patch/reboot.sh
+install -D -m 544 %{SOURCE4} %{buildroot}%{_libexecdir}/gsk-renderer-gl-patch/variables.sh
 
 %files
 %{_bindir}/gsk-renderer-gl-patch
-%{_libdir}/gsk-renderer-gl-patch/set.sh
-%{_libdir}/gsk-renderer-gl-patch/revert.sh
-%{_libdir}/gsk-renderer-gl-patch/reboot.sh
-%{_libdir}/gsk-renderer-gl-patch/variables.sh
+%{_libexecdir}/gsk-renderer-gl-patch/set.sh
+%{_libexecdir}/gsk-renderer-gl-patch/revert.sh
+%{_libexecdir}/gsk-renderer-gl-patch/reboot.sh
+%{_libexecdir}/gsk-renderer-gl-patch/variables.sh
 
 %post
 gsk-renderer-gl-patch set
