@@ -12,21 +12,21 @@ Requires: sed
 Patch for GSK rendering issues (sets GSK_RENDERER=gl)
 
 %install
-%include script/install.sh
+%include script/set.sh
 
 %post
 echo %{reboot_needed_message}
 
 %postun
 if [ "$1" -eq 0 ]; then
-  %include script/uninstall.sh
+  %include script/revert.sh
   echo %{reboot_needed_message}
 fi
 
 %files
 %{_sysconfdir}/environment.d/gsk.conf
-script/install.sh
-script/uninstall.sh
+script/set.sh
+script/revert.sh
 
 %changelog
 * 2024-10-11T13:20:54Z Malix <alixbrunetcontact@gmail.com> - 1.0
