@@ -9,12 +9,15 @@ Requires: sed
 %description
 Patch for GSK rendering issues (sets GSK_RENDERER=gl)
 
+Source0: src
+Source1: lib
+
 %install
-install -D -m 0544 %{_sourcedir}/src/main.sh %{_bindir}/gsk-renderer-gl-patch
-install -D -m 0544 %{_sourcedir}/lib/set.sh %{_libdir}/gsk-renderer-gl-patch/set.sh
-install -D -m 0544 %{_sourcedir}/lib/revert.sh %{_libdir}/gsk-renderer-gl-patch/revert.sh
-install -D -m 0544 %{_sourcedir}/lib/reboot.sh %{_libdir}/gsk-renderer-gl-patch/reboot.sh
-install -D -m 0544 %{_sourcedir}/lib/variables.sh %{_libdir}/gsk-renderer-gl-patch/variables.sh
+install -D -m 544 %{SOURCE0}/main.sh %{_bindir}/gsk-renderer-gl-patch
+install -D -m 544 %{SOURCE1}/set.sh %{_libdir}/gsk-renderer-gl-patch/set.sh
+install -D -m 544 %{SOURCE1}/revert.sh %{_libdir}/gsk-renderer-gl-patch/revert.sh
+install -D -m 544 %{SOURCE1}/reboot.sh %{_libdir}/gsk-renderer-gl-patch/reboot.sh
+install -D -m 544 %{SOURCE1}/variables.sh %{_libdir}/gsk-renderer-gl-patch/variables.sh
 
 %files
 %{_bindir}/gsk-renderer-gl-patch
