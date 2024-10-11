@@ -16,11 +16,11 @@ Source3: lib/reboot.sh
 Source4: lib/variables.sh
 
 %install
-install -D -m 544 %{SOURCE0} %{_bindir}/gsk-renderer-gl-patch
-install -D -m 544 %{SOURCE1} %{_libdir}/gsk-renderer-gl-patch/set.sh
-install -D -m 544 %{SOURCE2} %{_libdir}/gsk-renderer-gl-patch/revert.sh
-install -D -m 544 %{SOURCE3} %{_libdir}/gsk-renderer-gl-patch/reboot.sh
-install -D -m 544 %{SOURCE4} %{_libdir}/gsk-renderer-gl-patch/variables.sh
+install -D -m 544 %{SOURCE0} %{buildroot}%{_bindir}/gsk-renderer-gl-patch
+install -D -m 544 %{SOURCE1} %{buildroot}%{_libdir}/gsk-renderer-gl-patch/set.sh
+install -D -m 544 %{SOURCE2} %{buildroot}%{_libdir}/gsk-renderer-gl-patch/revert.sh
+install -D -m 544 %{SOURCE3} %{buildroot}%{_libdir}/gsk-renderer-gl-patch/reboot.sh
+install -D -m 544 %{SOURCE4} %{buildroot}%{_libdir}/gsk-renderer-gl-patch/variables.sh
 
 %files
 %{_bindir}/gsk-renderer-gl-patch
