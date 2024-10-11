@@ -8,6 +8,9 @@ License: unlicense
 Group: System/Configuration/Files
 Requires: sed
 
+%description
+Patch for GSK rendering issues (sets GSK_RENDERER=gl)
+
 %install
 %include script/install.sh
 
