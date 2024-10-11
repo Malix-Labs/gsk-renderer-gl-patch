@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. .lib/variables.sh
+. ./lib/variables.sh
 
 sed -i '/^GSK_RENDERER=gl$/d' "$CONF_FILE"
 
