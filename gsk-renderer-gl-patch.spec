@@ -24,7 +24,7 @@ if [ "$1" -eq 0 ]; then
 fi
 
 %files
-%{_sysconfdir}/environment.d/gsk-renderer-gl.conf
+%{_sysconfdir}/environment.d/gsk.conf
 script/install.sh
 script/uninstall.sh
 
