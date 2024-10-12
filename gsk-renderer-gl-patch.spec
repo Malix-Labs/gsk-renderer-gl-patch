@@ -1,5 +1,5 @@
-Source0: src/main.sh
-Source1: lib/set.sh
+Source1: src/main.sh
+Source0: lib/set.sh
 Source2: lib/revert.sh
 Source3: lib/reboot.sh
 Source4: lib/variables.sh
