@@ -19,7 +19,7 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postStartCommand": "xargs -a .devcontainer/packages.txt -n1 dnf install -y"
+	"postCreateCommand": "xargs -a .devcontainer/packages.txt -n1 dnf install -y"
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }
