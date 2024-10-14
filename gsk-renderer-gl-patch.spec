@@ -3,6 +3,7 @@ Summary: Patch for GSK rendering issues (sets GSK_RENDERER=gl)
 Version: 1.0.4
 Release: 1%{?dist}
 URL: https://github.com/Malix-Labs/%{name}
+Source0: https://github.com/Malix-Labs/%{name}
 License: unlicense
 Group: System/Configuration/Files
 Requires: sed
