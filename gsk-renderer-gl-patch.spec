@@ -27,6 +27,7 @@ install -D -m 544 lib/variables.sh %{buildroot}%{_libexecdir}/%{name}/variables.
 %files
 %{_bindir}/%{name}
 %dir %{_libexecdir}/%{name}
+%doc docs/README.md
 %license LICENSE
 
 %post
