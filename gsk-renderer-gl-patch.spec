@@ -22,6 +22,7 @@ install -D -m 544 lib/variables.sh %{buildroot}%{_libexecdir}/gsk-renderer-gl-pa
 %files
 %{_bindir}/%{name}
 %dir %{_libexecdir}/%{name}
+%license LICENSE
 
 %post
 gsk-renderer-gl-patch set
