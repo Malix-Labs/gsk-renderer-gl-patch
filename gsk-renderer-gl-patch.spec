@@ -2,6 +2,7 @@ Name: gsk-renderer-gl-patch
 Summary: Patch for GSK rendering issues (sets GSK_RENDERER=gl)
 Version: 1.0.4
 Release: 1%{?dist}
+URL: https://github.com/Malix-Labs/%{name}
 License: unlicense
 Group: System/Configuration/Files
 Requires: sed
@@ -12,12 +13,15 @@ Patch for GSK rendering issues (sets GSK_RENDERER=gl)
 %prep
 %autosetup
 
+%build
+# Nothing to build
+
 %install
-install -D -m 544 src/main.sh %{buildroot}%{_bindir}/gsk-renderer-gl-patch
-install -D -m 544 lib/set.sh %{buildroot}%{_libexecdir}/gsk-renderer-gl-patch/set.sh
-install -D -m 544 lib/revert.sh %{buildroot}%{_libexecdir}/gsk-renderer-gl-patch/revert.sh
-install -D -m 544 lib/reboot.sh %{buildroot}%{_libexecdir}/gsk-renderer-gl-patch/reboot.sh
-install -D -m 544 lib/variables.sh %{buildroot}%{_libexecdir}/gsk-renderer-gl-patch/variables.sh
+install -D -m 544 src/main.sh %{buildroot}%{_bindir}/%{name}
+install -D -m 544 lib/set.sh %{buildroot}%{_libexecdir}/%{name}/set.sh
+install -D -m 544 lib/revert.sh %{buildroot}%{_libexecdir}/%{name}/revert.sh
+install -D -m 544 lib/reboot.sh %{buildroot}%{_libexecdir}/%{name}/reboot.sh
+install -D -m 544 lib/variables.sh %{buildroot}%{_libexecdir}/%{name}/variables.sh
 
 %files
 %{_bindir}/%{name}
