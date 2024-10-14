@@ -1,9 +1,3 @@
-Source1: src/main.sh
-Source0: lib/set.sh
-Source2: lib/revert.sh
-Source3: lib/reboot.sh
-Source4: lib/variables.sh
-
 Name: gsk-renderer-gl-patch
 Summary: Patch for GSK rendering issues (sets GSK_RENDERER=gl)
 Version: 1.0.4
@@ -16,11 +10,11 @@ Requires: sed
 Patch for GSK rendering issues (sets GSK_RENDERER=gl)
 
 %install
-install -D -m 544 %{SOURCE0} %{buildroot}%{_bindir}/gsk-renderer-gl-patch
-install -D -m 544 %{SOURCE1} %{buildroot}%{_libexecdir}/gsk-renderer-gl-patch/set.sh
-install -D -m 544 %{SOURCE2} %{buildroot}%{_libexecdir}/gsk-renderer-gl-patch/revert.sh
-install -D -m 544 %{SOURCE3} %{buildroot}%{_libexecdir}/gsk-renderer-gl-patch/reboot.sh
-install -D -m 544 %{SOURCE4} %{buildroot}%{_libexecdir}/gsk-renderer-gl-patch/variables.sh
+install -D -m 544 src/main.sh %{buildroot}%{_bindir}/gsk-renderer-gl-patch
+install -D -m 544 lib/set.sh %{buildroot}%{_libexecdir}/gsk-renderer-gl-patch/set.sh
+install -D -m 544 lib/revert.sh %{buildroot}%{_libexecdir}/gsk-renderer-gl-patch/revert.sh
+install -D -m 544 lib/reboot.sh %{buildroot}%{_libexecdir}/gsk-renderer-gl-patch/reboot.sh
+install -D -m 544 lib/variables.sh %{buildroot}%{_libexecdir}/gsk-renderer-gl-patch/variables.sh
 
 %files
 %{_bindir}/gsk-renderer-gl-patch
