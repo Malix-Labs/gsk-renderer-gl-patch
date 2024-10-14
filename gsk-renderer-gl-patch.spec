@@ -10,7 +10,7 @@ Requires: sed
 Patch for GSK rendering issues (sets GSK_RENDERER=gl)
 
 %prep
-%setup -q
+%autosetup
 
 %install
 install -D -m 544 src/main.sh %{buildroot}%{_bindir}/gsk-renderer-gl-patch
