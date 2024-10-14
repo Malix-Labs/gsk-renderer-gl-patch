@@ -9,6 +9,9 @@ Requires: sed
 %description
 Patch for GSK rendering issues (sets GSK_RENDERER=gl)
 
+%prep
+%setup -q
+
 %install
 install -D -m 544 src/main.sh %{buildroot}%{_bindir}/gsk-renderer-gl-patch
 install -D -m 544 lib/set.sh %{buildroot}%{_libexecdir}/gsk-renderer-gl-patch/set.sh
@@ -17,11 +20,8 @@ install -D -m 544 lib/reboot.sh %{buildroot}%{_libexecdir}/gsk-renderer-gl-patch
 install -D -m 544 lib/variables.sh %{buildroot}%{_libexecdir}/gsk-renderer-gl-patch/variables.sh
 
 %files
-%{_bindir}/gsk-renderer-gl-patch
-%{_libexecdir}/gsk-renderer-gl-patch/set.sh
-%{_libexecdir}/gsk-renderer-gl-patch/revert.sh
-%{_libexecdir}/gsk-renderer-gl-patch/reboot.sh
-%{_libexecdir}/gsk-renderer-gl-patch/variables.sh
+%{_bindir}/%{name}
+%dir %{_libexecdir}/%{name}
 
 %post
 gsk-renderer-gl-patch set
