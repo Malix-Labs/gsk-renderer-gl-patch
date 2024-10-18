@@ -12,7 +12,7 @@ Requires: sed
 Patch for GSK rendering issues (sets GSK_RENDERER=gl)
 
 %prep
-%setup -q
+%autosetup
 
 %build
 # Nothing to build
