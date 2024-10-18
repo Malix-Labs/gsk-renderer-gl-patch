@@ -1,6 +1,6 @@
 Name: gsk-renderer-gl-patch
 Summary: Patch for GSK rendering issues (sets GSK_RENDERER=gl)
-Version: 1.0.4
+Version: 1.0.5
 Release: 1%{?dist}
 URL: https://github.com/Malix-Labs/%{name}
 Source0: %{url}/releases/tag/%{name}-%{version}.tar.gz
@@ -41,6 +41,43 @@ gsk-renderer-gl-patch set
 gsk-renderer-gl-patch revert
 
 %changelog
+* Fri Oct 18 2024 Malix <alixbrunetcontact@gmail.com> 1.0.5-1
+- add ./ (alixbrunetcontact@gmail.com)
+- test with autosetup (alixbrunetcontact@gmail.com)
+- zefzef (alixbrunetcontact@gmail.com)
+- test with q (alixbrunetcontact@gmail.com)
+- a (alixbrunetcontact@gmail.com)
+- add files (alixbrunetcontact@gmail.com)
+- a (alixbrunetcontact@gmail.com)
+- asas (alixbrunetcontact@gmail.com)
+- asasa (alixbrunetcontact@gmail.com)
+- now what (alixbrunetcontact@gmail.com)
+- a (alixbrunetcontact@gmail.com)
+- a (alixbrunetcontact@gmail.com)
+- k (alixbrunetcontact@gmail.com)
+- a (alixbrunetcontact@gmail.com)
+- Source0 (alixbrunetcontact@gmail.com)
+- test (alixbrunetcontact@gmail.com)
+- use var (alixbrunetcontact@gmail.com)
+- enhance: %%prep (alixbrunetcontact@gmail.com)
+- feat: rpm licence (alixbrunetcontact@gmail.com)
+- enhance: %%files (alixbrunetcontact@gmail.com)
+- deprecate: sources (alixbrunetcontact@gmail.com)
+- fix: devcontainer command (alixbrunetcontact@gmail.com)
+- fix: devcontainer postStartCommand (alixbrunetcontact@gmail.com)
+- test: reorder source (alixbrunetcontact@gmail.com)
+- fix: source order (alixbrunetcontact@gmail.com)
+- enhance: fhs (alixbrunetcontact@gmail.com)
+- feat: README (alixbrunetcontact@gmail.com)
+- feat: build test (alixbrunetcontact@gmail.com)
+- test agauin (alixbrunetcontact@gmail.com)
+- libmacro (alixbrunetcontact@gmail.com)
+- source macro (alixbrunetcontact@gmail.com)
+- test (alixbrunetcontact@gmail.com)
+- enhance: spec (alixbrunetcontact@gmail.com)
+- test (alixbrunetcontact@gmail.com)
+- feat: copr-cli package (alixbrunetcontact@gmail.com)
+
 * Fri Oct 11 2024 Malix <alixbrunetcontact@gmail.com> 1.0.4-1
 - yes test tito
 
