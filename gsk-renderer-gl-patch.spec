@@ -1,7 +1,7 @@
 Name: gsk-renderer-gl-patch
-Summary: Patch for GSK rendering issues (sets GSK_RENDERER=gl)
 Version: 1.0.5
 Release: 1%{?dist}
+Summary: Patch for GSK rendering issues (sets GSK_RENDERER=gl)
 URL: https://github.com/Malix-Labs/%{name}
 Source0: https://github.com/Malix-Labs/%{name}/releases/tag/%{name}-%{version}.tar.gz
 License: unlicense
@@ -25,7 +25,14 @@ install -D -m 544 ./lib/reboot.sh %{buildroot}%{_libexecdir}/%{name}/reboot.sh
 install -D -m 544 ./lib/variables.sh %{buildroot}%{_libexecdir}/%{name}/variables.sh
 
 %files
-
+%{_bindir}/%{name}
+%{_libexecdir}/%{name}/set.sh
+%{_libexecdir}/%{name}/revert.sh
+%{_libexecdir}/%{name}/reboot.sh
+%{_libexecdir}/%{name}/variables.sh
+%doc docs/CONTRIBUTING.md
+%doc docs/README.md
+%license LICENSE
 
 %post
 gsk-renderer-gl-patch set
