@@ -25,14 +25,7 @@ install -D -m 544 ./lib/reboot.sh %{buildroot}%{_libexecdir}/%{name}/reboot.sh
 install -D -m 544 ./lib/variables.sh %{buildroot}%{_libexecdir}/%{name}/variables.sh
 
 %files
-%{_bindir}/%{name}
-%{_libexecdir}/%{name}/set.sh
-%{_libexecdir}/%{name}/revert.sh
-%{_libexecdir}/%{name}/reboot.sh
-%{_libexecdir}/%{name}/variables.sh
-%doc docs/CONTRIBUTING.md
-%doc docs/README.md
-%license LICENSE
+
 
 %post
 gsk-renderer-gl-patch set
