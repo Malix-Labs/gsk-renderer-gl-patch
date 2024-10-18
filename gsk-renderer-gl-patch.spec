@@ -18,11 +18,11 @@ Patch for GSK rendering issues (sets GSK_RENDERER=gl)
 # Nothing to build
 
 %install
-install -D -m 544 src/main.sh %{buildroot}%{_bindir}/%{name}
-install -D -m 544 lib/set.sh %{buildroot}%{_libexecdir}/%{name}/set.sh
-install -D -m 544 lib/revert.sh %{buildroot}%{_libexecdir}/%{name}/revert.sh
-install -D -m 544 lib/reboot.sh %{buildroot}%{_libexecdir}/%{name}/reboot.sh
-install -D -m 544 lib/variables.sh %{buildroot}%{_libexecdir}/%{name}/variables.sh
+install -D -m 544 ./src/main.sh %{buildroot}%{_bindir}/%{name}
+install -D -m 544 ./lib/set.sh %{buildroot}%{_libexecdir}/%{name}/set.sh
+install -D -m 544 ./lib/revert.sh %{buildroot}%{_libexecdir}/%{name}/revert.sh
+install -D -m 544 ./lib/reboot.sh %{buildroot}%{_libexecdir}/%{name}/reboot.sh
+install -D -m 544 ./lib/variables.sh %{buildroot}%{_libexecdir}/%{name}/variables.sh
 
 %files
 %{_bindir}/%{name}
