@@ -2,9 +2,9 @@ Name: gsk-renderer-gl-patch
 Version: 1.0.5
 Release: 1%{?dist}
 Summary: Patch for GSK rendering issues (sets GSK_RENDERER=gl)
+License: unlicense
 URL: https://github.com/Malix-Labs/%{name}
 Source0: https://github.com/Malix-Labs/%{name}/releases/tag/%{name}-%{version}.tar.gz
-License: unlicense
 Group: System/Configuration/Files
 Requires: sed
 
@@ -12,7 +12,7 @@ Requires: sed
 Patch for GSK rendering issues (sets GSK_RENDERER=gl)
 
 %prep
-%autosetup
+%setup -q
 
 %build
 # Nothing to build
