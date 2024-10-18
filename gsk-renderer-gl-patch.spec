@@ -30,6 +30,7 @@ install -D -m 544 ./lib/variables.sh %{buildroot}%{_libexecdir}/%{name}/variable
 %{_libexecdir}/%{name}/revert.sh
 %{_libexecdir}/%{name}/reboot.sh
 %{_libexecdir}/%{name}/variables.sh
+%exclude %{_libexecdir}/%{name}/debugsourcefiles.list
 %doc docs/CONTRIBUTING.md
 %doc docs/README.md
 %license LICENSE
