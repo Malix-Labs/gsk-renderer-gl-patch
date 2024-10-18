@@ -27,6 +27,10 @@ install -D -m 544 lib/variables.sh %{buildroot}%{_libexecdir}/%{name}/variables.
 %files
 %{_bindir}/%{name}
 %dir %{_libexecdir}/%{name}
+%{_libexecdir}/%{name}/set.sh
+%{_libexecdir}/%{name}/revert.sh
+%{_libexecdir}/%{name}/reboot.sh
+%{_libexecdir}/%{name}/variables.sh
 %doc docs/*
 %license LICENSE
 
