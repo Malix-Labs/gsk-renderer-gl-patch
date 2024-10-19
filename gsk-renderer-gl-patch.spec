@@ -7,6 +7,7 @@ URL: https://github.com/Malix-Labs/%{name}
 Source0: https://github.com/Malix-Labs/%{name}/releases/tag/%{name}-%{version}.tar.gz
 Group: System/Configuration/Files
 Requires: sed
+BuildArch: noarch
 
 %description
 Patch for GSK rendering issues (sets GSK_RENDERER=gl)
