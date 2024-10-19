@@ -19,20 +19,20 @@ Patch for GSK rendering issues (sets GSK_RENDERER=gl)
 
 %install
 install -D -m 544 ./src/main.sh %{buildroot}%{_bindir}/%{name}
-install -D -m 544 ./lib/set.sh %{buildroot}%{_libexecdir}/%{name}/set.sh
-install -D -m 544 ./lib/revert.sh %{buildroot}%{_libexecdir}/%{name}/revert.sh
-install -D -m 544 ./lib/reboot.sh %{buildroot}%{_libexecdir}/%{name}/reboot.sh
-install -D -m 544 ./lib/variables.sh %{buildroot}%{_libexecdir}/%{name}/variables.sh
+install -D -m 544 ./lib/set.sh %{buildroot}%{_libdir}/%{name}/set.sh
+install -D -m 544 ./lib/revert.sh %{buildroot}%{_libdir}/%{name}/revert.sh
+install -D -m 544 ./lib/reboot.sh %{buildroot}%{_libdir}/%{name}/reboot.sh
+install -D -m 544 ./lib/variables.sh %{buildroot}%{_libdir}/%{name}/variables.sh
 
 %files
 %license LICENSE
 %doc docs/**
-%dir %{_libexecdir}/%{name}
+%dir %{_libdir}/%{name}
 %{_bindir}/%{name}
-%{_libexecdir}/%{name}/set.sh
-%{_libexecdir}/%{name}/revert.sh
-%{_libexecdir}/%{name}/reboot.sh
-%{_libexecdir}/%{name}/variables.sh
+%{_libdir}/%{name}/set.sh
+%{_libdir}/%{name}/revert.sh
+%{_libdir}/%{name}/reboot.sh
+%{_libdir}/%{name}/variables.sh
 
 %post
 gsk-renderer-gl-patch set
